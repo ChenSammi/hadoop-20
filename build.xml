@@ -381,9 +381,11 @@
   </target>
 
   <target name="compile-core-classes" depends="init, compile-rcc-compiler">
+    <!--
      <taskdef classname="org.apache.jasper.JspC" name="jsp-compile" >
         <classpath refid="test.classpath"/>
      </taskdef>
+     -->
     <!-- Compile Java files (excluding JSPs) checking warnings -->
     <javac
      includeantruntime="true"
@@ -408,6 +410,7 @@
   </target>
 
   <target name="compile-mapred-classes" depends="compile-core-classes">
+    <!--
     <jsp-compile
      uriroot="${src.webapps}/task"
      outputdir="${build.src}"
@@ -421,6 +424,7 @@
      package="org.apache.hadoop.mapred"
      webxml="${build.webapps}/job/WEB-INF/web.xml">
     </jsp-compile>
+    -->
 
     <!-- Compile Java files (excluding JSPs) checking warnings -->
     <javac
@@ -445,6 +449,7 @@
   </target>
 
   <target name="compile-hdfs-classes" depends="compile-core-classes">
+    <!--
     <jsp-compile
      uriroot="${src.webapps}/hdfs"
      outputdir="${build.src}"
@@ -465,6 +470,7 @@
      package="org.apache.hadoop.hdfs.qjournal.server"
      webxml="${build.webapps}/qjm/WEB-INF/web.xml">
     </jsp-compile>
+    -->
 
     <!-- Compile Java files (excluding JSPs) checking warnings -->
     <javac
@@ -1129,14 +1135,16 @@
   </target>
 
   <target name="forrest.check" unless="forrest.home" depends="java8.check">
-    <fail message="'forrest.home' is not defined. Please pass -Dforrest.home=&lt;base of Apache Forrest installation&gt; to Ant on the command-line." />
+    <!--<fail message="'forrest.home' is not defined. Please pass -Dforrest.home=&lt;base of Apache Forrest installation&gt; to Ant on the command-line." />-->
   </target>
 
   <target name="java8.check" unless="java8.home">
     <fail message="'java8.home' is not defined.  Forrest requires Java 8.  Please pass -Djava8.home=&lt;base of Java 8 distribution&gt; to Ant on the command-line." />
   </target>
 
+
   <target name="javadoc-dev" description="Generate javadoc for hadoop developers">
+    <!--
     <mkdir dir="${build.javadoc.dev}"/>
     <javadoc
       overview="${core.src.dir}/overview.html"
@@ -1176,9 +1184,11 @@
        <group title="contrib: Index" packages="org.apache.hadoop.contrib.index*"/>
 
     </javadoc>
+    -->
   </target>
 
   <target name="javadoc" depends="compile, ivy-retrieve-javadoc" description="Generate javadoc">
+    <!--
     <mkdir dir="${build.javadoc}"/>
     <javadoc
       overview="${core.src.dir}/overview.html"
@@ -1226,6 +1236,7 @@
     <jar jarfile="${build.dir}/${final.name}-javadoc.jar">
       <fileset dir="${build.javadoc}" includes="**/*"/>
     </jar>
+    -->
   </target>
 
   <target name="api-xml" depends="ivy-retrieve-jdiff,javadoc,write-null">

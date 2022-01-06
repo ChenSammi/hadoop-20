@@ -46,7 +46,7 @@
   <!-- Checks for Javadoc comments (checker).           -->
   <!-- See http://checkstyle.sf.net/config_javadoc.html -->
     <!-- Require package javadoc -->
-  <module name="JavadocPackage"/>
+  <!--<module name="JavadocPackage"/>-->
 
   <!-- Miscellaneous other checks (checker).         -->
   <!-- See http://checkstyle.sf.net/config_misc.html -->

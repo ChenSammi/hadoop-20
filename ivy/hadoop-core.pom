@@ -179,12 +179,18 @@
 
 
     <!--JSP support -->
-
+    <!--
     <dependency>
       <groupId>org.mortbay.jetty</groupId>
       <artifactId>jsp-2.1</artifactId>
       <version>${jetty.jsp.version}</version>
       <scope>optional</scope>
+    </dependency> -->
+    <dependency>
+      <!--This lib has JspC in it. Needed precompiling jsps in hbase-rest, etc.-->
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>javax.servlet.jsp</artifactId>
+      <version>2.3.2</version>
     </dependency>
     <dependency>
       <groupId>org.mortbay.jetty</groupId>

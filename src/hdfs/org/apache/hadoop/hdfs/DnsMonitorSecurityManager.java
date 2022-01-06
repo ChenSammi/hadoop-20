@@ -95,10 +95,6 @@ public class DnsMonitorSecurityManager extends SecurityManager {
   }
 
   @Override
-  public void checkAwtEventQueueAccess() {
-  }
-
-  @Override
   public void checkCreateClassLoader() {
   }
 
@@ -120,10 +116,6 @@ public class DnsMonitorSecurityManager extends SecurityManager {
 
   @Override
   public void checkListen(int port) {
-  }
-
-  @Override
-  public void checkMemberAccess(Class<?> clazz, int which) {
   }
 
   @Override
@@ -180,10 +172,6 @@ public class DnsMonitorSecurityManager extends SecurityManager {
 
   @Override
   public void checkSetFactory() {
-  }
-
-  @Override
-  public void checkSystemClipboardAccess() {
   }
 
   @Override
