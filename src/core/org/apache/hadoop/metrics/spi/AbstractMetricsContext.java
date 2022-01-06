@@ -380,7 +380,7 @@ public abstract class AbstractMetricsContext implements MetricsContext {
       return Integer.valueOf(a.intValue() + b.intValue());
     }
     else if (a instanceof Float) {
-      return new Float(a.floatValue() + b.floatValue());
+      return Float.valueOf(a.floatValue() + b.floatValue());
     }
     else if (a instanceof Short) {
       return Short.valueOf((short)(a.shortValue() + b.shortValue()));

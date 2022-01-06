@@ -1458,13 +1458,13 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
         if (value instanceof String) {
           stringVal = (String)value;
         } else if (value instanceof Integer) {
-            stringVal = new Integer((Integer)value).toString();
+            stringVal = value.toString();
         } else if (value instanceof Long) {
-            stringVal = new Long((Long)value).toString();
+            stringVal = value.toString();
         } else if (value instanceof Double) {
-            stringVal = new Double((Double)value).toString();
+            stringVal = value.toString();
         } else if (value instanceof Boolean) {
-            stringVal = new Boolean((Boolean)value).toString();
+            stringVal = value.toString();
         } else if (value instanceof JSONObject) {
             loadJsonResource((JSONObject)value, properties, name);
             continue;

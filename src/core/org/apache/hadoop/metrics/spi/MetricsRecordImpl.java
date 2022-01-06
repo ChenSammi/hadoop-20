@@ -177,7 +177,7 @@ public class MetricsRecordImpl implements MetricsRecord {
    * conflicts with the configuration
    */
   public void setMetric(String metricName, float metricValue) {
-    setAbsolute(metricName, new Float(metricValue));
+    setAbsolute(metricName, Float.valueOf(metricValue));
   }
     
   /**
@@ -237,7 +237,7 @@ public class MetricsRecordImpl implements MetricsRecord {
    * conflicts with the configuration
    */
   public void incrMetric(String metricName, float metricValue) {
-    setIncrement(metricName, new Float(metricValue));
+    setIncrement(metricName, Float.valueOf(metricValue));
   }
     
   private void setAbsolute(String metricName, Number metricValue) {
